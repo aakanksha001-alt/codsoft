@@ -54,7 +54,7 @@ def play_game():
     print(f"\nScore -> You: {user_score} | Computer: {computer_score}")
 
 
-# Main loop
+
 while True:
     play_game()
 
