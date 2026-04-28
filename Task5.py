@@ -1,4 +1,4 @@
-# Contact Book Application
+
 
 contacts = []
 
@@ -92,9 +92,8 @@ def delete_contact():
         else:
             print("Invalid contact number.")
     except ValueError:
-        print("Please enter a valid number.")
-
-# Main loop
+        print("Please enter a valid number."
+              
 while True:
     show_menu()
     choice = input("Enter your choice (1-6): ")
