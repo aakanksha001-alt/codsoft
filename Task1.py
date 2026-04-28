@@ -3,25 +3,24 @@ import os
 
 FILE_NAME = "tasks.json"
 
-# Load tasks from file
+
 def load_tasks():
     if os.path.exists(FILE_NAME):
         with open(FILE_NAME, "r") as file:
             return json.load(file)
     return []
 
-# Save tasks to file
+
 def save_tasks(tasks):
     with open(FILE_NAME, "w") as file:
         json.dump(tasks, file, indent=4)
 
-# Add task
+
 def add_task(tasks):
     task = input("Enter new task: ")
     tasks.append({"task": task, "done": False})
     print("Task added successfully!")
 
-# View tasks
 def view_tasks(tasks):
     if not tasks:
         print("No tasks found!")
@@ -31,7 +30,7 @@ def view_tasks(tasks):
         status = "✔" if t["done"] else "✘"
         print(f"{i}. {t['task']} [{status}]")
 
-# Mark task as done
+
 def mark_done(tasks):
     view_tasks(tasks)
     try:
@@ -41,7 +40,7 @@ def mark_done(tasks):
     except:
         print("Invalid input!")
 
-# Delete task
+
 def delete_task(tasks):
     view_tasks(tasks)
     try:
@@ -51,7 +50,7 @@ def delete_task(tasks):
     except:
         print("Invalid input!")
 
-# Main menu
+
 def main():
     tasks = load_tasks()
 
