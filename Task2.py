@@ -1,6 +1,3 @@
-# Simple Calculator Program
-
-
 def add(a, b):
     return a + b
 
